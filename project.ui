@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1104</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QComboBox" name="modes">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Сделать снимок с веб камеры</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Редактор</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Просмотр</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Добавить файл</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="veb_screen">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>640</width>
+     <height>640</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="save_button">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>350</y>
+     <width>161</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Сохранить изображение</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="name_file">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>290</y>
+     <width>231</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>240</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Название сохраняемого файла</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="eror_label">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>460</y>
+     <width>231</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="load_name">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>181</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="loaded_image">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>170</y>
+     <width>640</width>
+     <height>640</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="save_loaded_but">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>800</y>
+     <width>161</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Сохранить изображение</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="filters">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>820</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="currentText">
+    <string>Фильтры</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>Фильтры</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Размытие</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Только красный канал</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Только синий канал</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Только зеленый канал</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Черно-Белый</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Альтернативные цвета</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Сепия</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Сделать ярче</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="load_but">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>100</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>загрузить</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>181</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Название загружаемого файла</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="discard_but">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>820</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Отменить изменения</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="load_eror_label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>130</y>
+     <width>261</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="use_filter_but">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>820</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Применить фильтр</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>680</y>
+     <width>171</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Название сохраняемого файла</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="saved_name">
+   <property name="geometry">
+    <rect>
+     <x>780</x>
+     <y>720</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="resave_but">
+   <property name="geometry">
+    <rect>
+     <x>720</x>
+     <y>800</y>
+     <width>151</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Пересохранить текущее</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="saved_eror_label">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>770</y>
+     <width>271</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>740</y>
+     <width>271</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Заметка для изображения</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="note_text">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>780</y>
+     <width>541</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="cursorPosition">
+    <number>0</number>
+   </property>
+   <property name="clearButtonEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>750</x>
+     <y>290</y>
+     <width>231</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Ваша заметка к данному изображению:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="note">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>740</x>
+     <y>320</y>
+     <width>251</width>
+     <height>71</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="save_red_note">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>410</y>
+     <width>151</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Сохранить заметку</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="db_show_but">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>690</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Показать изображение</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="db_image">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>120</y>
+     <width>640</width>
+     <height>640</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="db_note">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>780</y>
+     <width>471</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTableView" name="db_table">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>230</y>
+     <width>381</width>
+     <height>421</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="note_eror_label">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>380</y>
+     <width>211</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="db_name">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>660</y>
+     <width>251</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>660</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Название:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="db_eror_label">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>660</y>
+     <width>231</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="del_from_bd">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>690</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Удалить</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="dialog_image">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>150</y>
+     <width>640</width>
+     <height>640</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="load_dialog">
+   <property name="geometry">
+    <rect>
+     <x>760</x>
+     <y>500</y>
+     <width>201</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Загрузить файл</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="note_look">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>780</y>
+     <width>541</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="repeat_save_but">
+   <property name="geometry">
+    <rect>
+     <x>930</x>
+     <y>750</y>
+     <width>161</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Добавить</string>
+   </property>
+  </widget>
+  <zorder>db_image</zorder>
+  <zorder>modes</zorder>
+  <zorder>veb_screen</zorder>
+  <zorder>save_button</zorder>
+  <zorder>name_file</zorder>
+  <zorder>label_2</zorder>
+  <zorder>eror_label</zorder>
+  <zorder>load_name</zorder>
+  <zorder>loaded_image</zorder>
+  <zorder>save_loaded_but</zorder>
+  <zorder>filters</zorder>
+  <zorder>load_but</zorder>
+  <zorder>label</zorder>
+  <zorder>discard_but</zorder>
+  <zorder>load_eror_label</zorder>
+  <zorder>use_filter_but</zorder>
+  <zorder>label_3</zorder>
+  <zorder>saved_name</zorder>
+  <zorder>resave_but</zorder>
+  <zorder>saved_eror_label</zorder>
+  <zorder>label_4</zorder>
+  <zorder>note_text</zorder>
+  <zorder>label_5</zorder>
+  <zorder>note</zorder>
+  <zorder>save_red_note</zorder>
+  <zorder>db_show_but</zorder>
+  <zorder>db_note</zorder>
+  <zorder>db_table</zorder>
+  <zorder>note_eror_label</zorder>
+  <zorder>db_name</zorder>
+  <zorder>label_6</zorder>
+  <zorder>db_eror_label</zorder>
+  <zorder>del_from_bd</zorder>
+  <zorder>dialog_image</zorder>
+  <zorder>load_dialog</zorder>
+  <zorder>note_look</zorder>
+  <zorder>repeat_save_but</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
